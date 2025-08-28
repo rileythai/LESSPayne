@@ -545,7 +545,7 @@ def get_fullerrors_summary(sumcfg,
         # add an amount of uncertainty here depending on what you want
         w = ttab["weight"]
         if additional_weights is not None:
-            w += (additional_weights.get(species, default=0)**2
+            w += (additional_weights.get(species, 0)**2
                   )  # w = e_tot^2, so just add sqr.
 
         finite = np.isfinite(w)
